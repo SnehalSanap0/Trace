@@ -2,15 +2,11 @@
 
 This repository contains Python scripts for implementing object detection using TensorFlow and OpenCV. The project uses a pre-trained SSD Mobilenet V2 model from TensorFlow Hub for detecting objects in real-time from either video files or webcam streams.
 
----
-
 ## Features
 
 - **Pre-trained Model:** Utilizes TensorFlow Hub's SSD Mobilenet V2 for efficient object detection.
 - **Real-Time Processing:** Supports both video files (`real.py`) and live webcam streams (`real2.py`).
 - **Visualization:** Draws bounding boxes with class names and confidence scores on detected objects.
-
----
 
 ## Requirements
 
@@ -20,8 +16,6 @@ This repository contains Python scripts for implementing object detection using 
 - OpenCV
 - NumPy
 - ScreenInfo
-
----
 
 ## Installation
 
@@ -55,7 +49,8 @@ To detect objects using your webcam (real2.py):
 python real2.py
 ```
 
-### Usage
+## Usage
+
 Running real.py
 Place your video file (e.g., classroom.mp4) in the project directory.
 Run the script:
@@ -63,6 +58,7 @@ Run the script:
 python real.py
 ```
 The output window will display detected objects with bounding boxes.
+
 Running real2.py
 Connect your webcam.
 Run the script:
@@ -71,12 +67,14 @@ python real2.py
 ```
 Press q to close the detection window.
 
-### Customization
+## Customization
+
 Video Input for real.py: Update the video file path in the script real.py to use a different file:
 
 ```python
 video = cv2.VideoCapture("your_video.mp4")
 ```
+
 Resolution for real2.py: Modify the resolution settings in real2.py:
 
 ```python
@@ -84,10 +82,12 @@ video.set(cv2.CAP_PROP_FRAME_WIDTH, 640)
 video.set(cv2.CAP_PROP_FRAME_HEIGHT, 480)
 ```
 
-### Troubleshooting
+## Troubleshooting
+
 TensorFlow Hub Loading Issues:
 
 Ensure your internet connection is active when running the script for the first time.
+
 Webcam Not Working:
 
 Check that the correct webcam index (0 for default camera) is used in real2.py:
@@ -95,9 +95,10 @@ Check that the correct webcam index (0 for default camera) is used in real2.py:
 video = cv2.VideoCapture(0)
 ```
 
-### Performance Issues:
+## Performance Issues
 
 Reduce video resolution to improve performance in real2.py.
 
-### Contributing
+## Contributing
+
 Contributions are welcome! Feel free to open an issue or submit a pull request to improve the project.
