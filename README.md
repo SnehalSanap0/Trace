@@ -29,7 +29,7 @@ This repository contains Python scripts for implementing object detection using 
 Use the following commands to clone this repository and navigate to the project directory:
 ```bash
 git clone https://github.com/SnehalSanap0/Trace.git
-cd project-name
+cd Trace
 ```
 
 ### Step 2: Install Dependencies
