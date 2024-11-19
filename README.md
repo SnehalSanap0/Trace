@@ -1,11 +1,11 @@
 # Real-Time Object Detection with TensorFlow and OpenCV
 
-This repository contains Python scripts for implementing object detection using TensorFlow and OpenCV. The project uses a pre-trained SSD Mobilenet V2 model from TensorFlow Hub for detecting objects in real-time from either video files or webcam streams.
+This repository contains Python scripts for implementing object detection using TensorFlow and OpenCV. The project uses a pre-trained SSD Mobilenet V2 model from TensorFlow Hub for detecting objects in real-time from either image or video files or webcam streams.
 
 ## Features
 
 - **Pre-trained Model:** Utilizes TensorFlow Hub's SSD Mobilenet V2 for efficient object detection.
-- **Real-Time Processing:** Supports both video files (`real.py`) and live webcam streams (`real2.py`).
+- **Real-Time Processing:** Supports image(`real3.py`) as well as video files (`real.py`) and live webcam streams (`real2.py`).
 - **Visualization:** Draws bounding boxes with class names and confidence scores on detected objects.
 
 ## Requirements
@@ -49,6 +49,12 @@ To detect objects using your webcam (real2.py):
 python real2.py
 ```
 
+To process image files (real3.py):
+
+```bash
+python real3.py
+```
+
 ## Usage
 
 Running real.py
@@ -67,6 +73,18 @@ python real2.py
 ```
 Press q to close the detection window.
 
+Running real3.py
+Place your image file (e.g., image3.jpg) in the project directory.
+Update the image file path in the script:
+```python
+image_path = "image3.jpg"
+```
+Run the script:
+```bash
+python real3.py
+```
+The script will display the image with detected objects highlighted. Press any key to close the window.
+
 ## Customization
 
 Video Input for real.py: Update the video file path in the script real.py to use a different file:
@@ -80,6 +98,18 @@ Resolution for real2.py: Modify the resolution settings in real2.py:
 ```python
 video.set(cv2.CAP_PROP_FRAME_WIDTH, 640)
 video.set(cv2.CAP_PROP_FRAME_HEIGHT, 480)
+```
+
+Image Path: Update the image_path variable to specify the file you want to process:
+
+```python
+image_path = "your_image.jpg"
+```
+
+Detection Threshold: Change the score_threshold in the draw function to filter detections by confidence level:
+
+```python
+score_threshold=0.1  # Increase to show fewer, higher-confidence detections
 ```
 
 ## Troubleshooting
@@ -98,6 +128,8 @@ video = cv2.VideoCapture(0)
 ## Performance Issues
 
 Reduce video resolution to improve performance in real2.py.
+Use smaller input images to speed up processing.
+Adjust the detection threshold to reduce the number of displayed objects.
 
 ## Contributing
 
